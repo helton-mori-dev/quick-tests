@@ -10,6 +10,11 @@ describe('notification Component', () => {
         status
       }
     })
+    expect(wrapper.html()).toMatchInlineSnapshot(`
+      "<div role=\\"alert\\" class=\\"notification notification--error\\">
+        <p class=\\"notification__text\\"></p><button title=\\"close\\" class=\\"notification__button\\"> ✕ </button>
+      </div>"
+    `)
     expect(wrapper.classes()).toEqual(expect.arrayContaining(['notification--error']))
   })
   test('renders correct style for success', () => {
